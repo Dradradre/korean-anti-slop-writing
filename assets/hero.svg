@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-labelledby="t d">
+  <title id="t">korean-anti-slop-writing</title>
+  <desc id="d">원고지에 적힌 'AI 티 빼기'와, 교정지 위에서 빨간 펜이 AI 말투에 줄을 긋고 고친 말을 적는 애니메이션</desc>
+  <defs>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#E3D8C6"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#5B4630" flood-opacity="0.18"/>
+    </filter>
+    <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.2"/>
+    </filter>
+    <style>
+      .sans  { font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", sans-serif; }
+      .serif { font-family: "Noto Serif KR", "Nanum Myeongjo", "AppleMyungjo", "Batang", "Noto Serif CJK KR", serif; }
+      .mono  { font-family: "D2Coding", "JetBrains Mono", "Consolas", "Menlo", monospace; }
+
+      .strike { fill: none; stroke: #D2382B; stroke-width: 3; stroke-linecap: round;
+                stroke-dasharray: 1; stroke-dashoffset: 1; animation: strike 10s infinite both; }
+      .slop   { animation: dim 10s infinite both; }
+      .fix    { animation: fix 10s infinite both; }
+      .stamp  { transform-box: fill-box; transform-origin: center; animation: stamp 10s infinite both; animation-delay: 4.9s; }
+      .caret  { animation: blink 1.1s steps(1) infinite; }
+
+      @keyframes strike { 0%, 3% { stroke-dashoffset: 1; opacity: 1; } 8%, 86% { stroke-dashoffset: 0; opacity: 1; }
+                          93% { stroke-dashoffset: 0; opacity: 0; } 100% { stroke-dashoffset: 1; opacity: 0; } }
+      @keyframes dim    { 0%, 6% { opacity: 1; } 10%, 86% { opacity: .38; } 93%, 100% { opacity: 1; } }
+      @keyframes fix    { 0%, 7% { opacity: 0; transform: translateX(-8px); } 12%, 86% { opacity: 1; transform: translateX(0); }
+                          93%, 100% { opacity: 0; transform: translateX(0); } }
+      @keyframes stamp  { 0% { opacity: 0; transform: rotate(-14deg) scale(1.7); } 3% { opacity: .9; transform: rotate(-14deg) scale(1); }
+                          40% { opacity: .9; transform: rotate(-14deg) scale(1); } 46%, 100% { opacity: 0; transform: rotate(-14deg) scale(1); } }
+      @keyframes blink  { 0% { opacity: 1; } 50% { opacity: 0; } }
+
+      @media (prefers-reduced-motion: reduce) {
+        .strike { animation: none; stroke-dashoffset: 0; }
+        .slop   { animation: none; opacity: .38; }
+        .fix    { animation: none; opacity: 1; }
+        .stamp  { animation: none; opacity: .9; transform: rotate(-14deg); }
+        .caret  { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <!-- paper -->
+  <rect x="0" y="0" width="1280" height="440" rx="28" fill="#F5F0E6"/>
+  <rect x="0" y="0" width="1280" height="440" rx="28" fill="url(#dots)"/>
+  <rect x="0.75" y="0.75" width="1278.5" height="438.5" rx="27.5" fill="none" stroke="#E2D6C2" stroke-width="1.5"/>
+
+  <!-- label -->
+  <text x="64" y="76" class="mono" font-size="14" letter-spacing="4" fill="#D2382B" font-weight="700">KOREAN ANTI-SLOP WRITING</text>
+  <text x="384" y="76" class="mono" font-size="14" letter-spacing="2" fill="#A3978A">v2</text>
+
+  <!-- manuscript paper (원고지) -->
+  <g stroke="#E3A595" fill="none">
+    <rect x="64" y="96" width="588" height="12" stroke-width="1.5"/>
+    <rect x="64" y="108" width="588" height="84" stroke-width="2.5"/>
+    <path d="M148 108v84M232 108v84M316 108v84M400 108v84M484 108v84M568 108v84" stroke-width="1.5"/>
+    <rect x="64" y="192" width="588" height="12" stroke-width="1.5"/>
+  </g>
+  <g class="serif" font-size="56" font-weight="700" fill="#1E1B18" text-anchor="middle" dominant-baseline="central">
+    <text x="106" y="152">A</text>
+    <text x="190" y="152">I</text>
+    <text x="358" y="152">티</text>
+    <text x="526" y="152">빼</text>
+    <text x="610" y="152">기</text>
+  </g>
+
+  <!-- tagline -->
+  <text x="64" y="262" class="sans" font-size="29" font-weight="800" fill="#1E1B18">한국어 글에 남은 AI 말투를 찾아서 고칩니다<tspan class="caret" fill="#D2382B" font-weight="400"> |</tspan></text>
+  <text x="64" y="300" class="sans" font-size="17" fill="#6E655B">Claude Code와 Codex에서 쓰는 윤문 스킬, 의존성 없는 검사 스크립트</text>
+
+  <!-- stats -->
+  <g class="serif" font-weight="700" fill="#1E1B18" font-size="46">
+    <text x="64" y="380">66</text>
+    <text x="214" y="380">58</text>
+    <text x="364" y="380">7</text>
+  </g>
+  <g class="sans" font-size="14" fill="#857A6E">
+    <text x="64" y="406">검사 규칙</text>
+    <text x="214" y="406">체크리스트 항목</text>
+    <text x="364" y="406">AI 말투 계열</text>
+  </g>
+  <path d="M188 344v66M338 344v66" stroke="#DCCFBB" stroke-width="1.5"/>
+
+  <!-- proof sheet (교정지) -->
+  <g transform="rotate(-2 975 222)">
+    <rect x="740" y="56" width="470" height="334" rx="6" fill="#FFFDF8" filter="url(#shadow)"/>
+    <text x="772" y="98" class="mono" font-size="12" letter-spacing="3" fill="#A3978A">PROOF 01</text>
+    <path d="M772 112h406" stroke="#EADFCF" stroke-width="1.5"/>
+    <g stroke="#F1E9DC" stroke-width="1">
+      <path d="M772 162h406M772 212h406M772 262h406M772 312h406"/>
+    </g>
+
+    <g class="sans" font-size="20" fill="#1E1B18">
+      <text class="slop" x="772" y="148" textLength="166" lengthAdjust="spacingAndGlyphs" style="animation-delay:.6s">조용히 삼켜집니다</text>
+      <text class="slop" x="772" y="198" textLength="146" lengthAdjust="spacingAndGlyphs" style="animation-delay:1.5s">설계·구현·검증</text>
+      <text class="slop" x="772" y="248" textLength="150" lengthAdjust="spacingAndGlyphs" style="animation-delay:2.4s">이게 중요합니다.</text>
+      <text class="slop" x="772" y="298" textLength="170" lengthAdjust="spacingAndGlyphs" style="animation-delay:3.3s">A가 아니라 B입니다</text>
+      <text class="slop" x="772" y="348" textLength="150" lengthAdjust="spacingAndGlyphs" style="animation-delay:4.2s">좋은 질문입니다!</text>
+    </g>
+
+    <g filter="url(#ink)">
+      <path class="strike" pathLength="1" style="animation-delay:.6s"  d="M766 142 C 822 137, 878 146, 944 140"/>
+      <path class="strike" pathLength="1" style="animation-delay:1.5s" d="M766 192 C 815 187, 866 196, 924 190"/>
+      <path class="strike" pathLength="1" style="animation-delay:2.4s" d="M766 242 C 816 237, 868 246, 928 240"/>
+      <path class="strike" pathLength="1" style="animation-delay:3.3s" d="M766 292 C 823 287, 882 296, 948 290"/>
+      <path class="strike" pathLength="1" style="animation-delay:4.2s" d="M766 342 C 816 337, 868 346, 928 340"/>
+    </g>
+
+    <g class="sans" font-size="19" font-weight="700" fill="#D2382B">
+      <text class="fix" x="984" y="148" style="animation-delay:.6s">기록이 안 남습니다</text>
+      <text class="fix" x="984" y="198" style="animation-delay:1.5s">설계와 구현, 검증</text>
+      <text class="fix" x="984" y="248" style="animation-delay:2.4s">알림이 멈춥니다.</text>
+      <text class="fix" x="984" y="298" style="animation-delay:3.3s">B입니다.</text>
+      <text class="fix" x="984" y="348" style="animation-delay:4.2s">삭제</text>
+    </g>
+
+    <!-- stamp -->
+    <g class="stamp" filter="url(#ink)">
+      <circle cx="1146" cy="88" r="36" fill="none" stroke="#D2382B" stroke-width="3.5"/>
+      <circle cx="1146" cy="88" r="29" fill="none" stroke="#D2382B" stroke-width="1.5"/>
+      <text x="1146" y="86" class="sans" font-size="19" font-weight="900" fill="#D2382B" text-anchor="middle">AI 티</text>
+      <text x="1146" y="105" class="sans" font-size="11" font-weight="700" fill="#D2382B" text-anchor="middle" letter-spacing="3">검출</text>
+    </g>
+  </g>
+</svg>

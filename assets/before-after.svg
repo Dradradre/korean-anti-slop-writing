@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 620" width="1280" height="620" role="img" aria-labelledby="t d">
+  <title id="t">고치기 전과 고친 뒤</title>
+  <desc id="d">AI가 쓴 답변에서 검사기가 11건을 찾았고, 고친 답변은 0건입니다. 글자 수는 141자에서 92자로 줄었습니다.</desc>
+  <defs>
+    <pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse">
+      <rect width="6" height="6" fill="#1F1C19"/>
+      <circle cx="1" cy="1" r=".6" fill="#2A2622"/>
+    </pattern>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2"/>
+    </filter>
+    <style>
+      .sans  { font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", sans-serif; }
+      .serif { font-family: "Noto Serif KR", "Nanum Myeongjo", "AppleMyungjo", "Batang", "Noto Serif CJK KR", serif; }
+      .mono  { font-family: "D2Coding", "JetBrains Mono", "Consolas", "Menlo", monospace; }
+      .body  { font-size: 20px; fill: #2B2622; }
+      .s     { fill: #D2382B; font-weight: 700; }
+      .m     { fill: #D2382B; font-size: 12px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <!-- desk -->
+  <rect width="1280" height="620" rx="28" fill="url(#grain)"/>
+
+  <!-- ===== BEFORE ===== -->
+  <g transform="rotate(-1.2 336 310)">
+    <rect x="56" y="52" width="560" height="512" rx="6" fill="#F5F0E6" filter="url(#shadow)"/>
+    <text x="88" y="98" class="mono" font-size="12" letter-spacing="4" font-weight="700" fill="#D2382B">BEFORE</text>
+    <text x="88" y="132" class="sans" font-size="23" font-weight="800" fill="#1E1B18">AI가 쓴 답변</text>
+    <g filter="url(#ink)">
+      <rect x="470" y="104" width="114" height="36" rx="18" fill="none" stroke="#D2382B" stroke-width="2.5"/>
+      <text x="527" y="128" class="sans" font-size="16" font-weight="800" fill="#D2382B" text-anchor="middle">검사 11건</text>
+    </g>
+    <path d="M88 156h496" stroke="#E2D6C2" stroke-width="1.5"/>
+
+    <g class="sans body" xml:space="preserve">
+      <text x="88" y="200"><tspan class="s">좋은 질문입니다!</tspan><tspan class="m" dy="-9">1</tspan><tspan dy="9"> </tspan><tspan class="s">결론부터 말하면,</tspan><tspan class="m" dy="-9">2</tspan></text>
+      <text x="88" y="238">이건 <tspan class="s">단순한 설정 문제가 아니라</tspan><tspan class="m" dy="-9">3</tspan><tspan dy="9"> 구조</tspan></text>
+      <text x="88" y="276">문제입니다. 수집기가 전체 파이프라인을</text>
+      <text x="88" y="314"><tspan class="s">조용히 떠받치고</tspan><tspan class="m" dy="-9">4</tspan><tspan dy="9"> 있습니다 </tspan><tspan class="s">—</tspan><tspan class="m" dy="-9">5</tspan><tspan dy="9"> </tspan><tspan class="s">이게</tspan></text>
+      <text x="88" y="352"><tspan class="s">중요합니다.</tspan><tspan class="m" dy="-9">6</tspan><tspan dy="9"> </tspan><tspan class="s">설계·구현·검증</tspan><tspan class="m" dy="-9">7</tspan><tspan dy="9"> 단계를 다시</tspan></text>
+      <text x="88" y="390">확인했고<tspan class="s">,</tspan><tspan class="m" dy="-9">8</tspan><tspan dy="9"> 결과를 정리했습니다.</tspan></text>
+      <text x="88" y="428"><tspan class="s">원하시면 표로도 정리해 드릴까요?</tspan><tspan class="m" dy="-9">9</tspan></text>
+    </g>
+
+    <path d="M88 456h496" stroke="#E2D6C2" stroke-width="1.5" stroke-dasharray="4 5"/>
+
+    <g class="sans" font-size="14" fill="#5E554C">
+      <g fill="#D2382B">
+        <circle cx="96" cy="483" r="9"/><circle cx="268" cy="483" r="9"/><circle cx="440" cy="483" r="9"/>
+        <circle cx="96" cy="510" r="9"/><circle cx="268" cy="510" r="9"/><circle cx="440" cy="510" r="9"/>
+        <circle cx="96" cy="537" r="9"/><circle cx="268" cy="537" r="9"/><circle cx="440" cy="537" r="9"/>
+      </g>
+      <g fill="#FFF" font-size="11" font-weight="800" text-anchor="middle">
+        <text x="96" y="487">1</text><text x="268" y="487">2</text><text x="440" y="487">3</text>
+        <text x="96" y="514">4</text><text x="268" y="514">5</text><text x="440" y="514">6</text>
+        <text x="96" y="541">7</text><text x="268" y="541">8</text><text x="440" y="541">9</text>
+      </g>
+      <text x="112" y="488">맞장구</text><text x="284" y="488">전문직 틀</text><text x="456" y="488">대비 틀</text>
+      <text x="112" y="515">Claude 말버릇</text><text x="284" y="515">엠대시</text><text x="456" y="515">'중요' 틀</text>
+      <text x="112" y="542">가운데점</text><text x="284" y="542">연결어미 쉼표</text><text x="456" y="542">끝 제안</text>
+    </g>
+  </g>
+
+  <!-- arrow -->
+  <g filter="url(#ink)">
+    <circle cx="640" cy="310" r="25" fill="#D2382B"/>
+    <path d="M629 310h20M641 301l9 9-9 9" fill="none" stroke="#FFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== AFTER ===== -->
+  <g transform="rotate(1 944 310)">
+    <rect x="664" y="52" width="560" height="512" rx="6" fill="#FFFDF8" filter="url(#shadow)"/>
+    <text x="696" y="98" class="mono" font-size="12" letter-spacing="4" font-weight="700" fill="#8A7F73">AFTER</text>
+    <text x="696" y="132" class="sans" font-size="23" font-weight="800" fill="#1E1B18">고친 답변</text>
+    <rect x="1092" y="104" width="100" height="36" rx="18" fill="#1E1B18"/>
+    <text x="1142" y="128" class="sans" font-size="16" font-weight="800" fill="#F5F0E6" text-anchor="middle">검사 0건</text>
+    <path d="M696 156h496" stroke="#EADFCF" stroke-width="1.5"/>
+
+    <g class="sans body">
+      <text x="696" y="200">구조 문제입니다. 설정을 바꿔도 같은</text>
+      <text x="696" y="238">오류가 납니다. 수집기가 멈추면 뒤의</text>
+      <text x="696" y="276">파이프라인도 모두 멈춥니다.</text>
+      <text x="696" y="314">설계와 구현, 검증 단계를 다시 확인하고</text>
+      <text x="696" y="352">결과를 정리했습니다.</text>
+    </g>
+
+    <g filter="url(#ink)" fill="none" stroke="#D2382B" stroke-width="2">
+      <rect x="696" y="386" width="92" height="32" rx="16"/>
+      <rect x="800" y="386" width="108" height="32" rx="16"/>
+      <rect x="920" y="386" width="108" height="32" rx="16"/>
+    </g>
+    <g class="sans" font-size="14" font-weight="700" fill="#D2382B" text-anchor="middle">
+      <text x="742" y="407">결론 먼저</text>
+      <text x="854" y="407">근거 바로 뒤</text>
+      <text x="974" y="407">끝 제안 삭제</text>
+    </g>
+
+    <path d="M696 456h496" stroke="#EADFCF" stroke-width="1.5" stroke-dasharray="4 5"/>
+
+    <g class="sans" font-size="14" fill="#857A6E">
+      <text x="696" y="490">검사 결과</text>
+      <text x="912" y="490">글자 수</text>
+    </g>
+    <g class="serif" font-weight="700" fill="#1E1B18" font-size="34">
+      <text x="696" y="534">11 <tspan fill="#D2382B" font-size="26">→</tspan> 0</text>
+      <text x="912" y="534">141 <tspan fill="#D2382B" font-size="26">→</tspan> 92</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 540" width="1280" height="540" role="img" aria-labelledby="t d">
+  <title id="t">lint_korean_slop.py 실행 결과</title>
+  <desc id="d">AI 말투 예문을 검사 스크립트로 검사해 11건을 찾은 실제 출력. 근거 문장 줄은 생략했습니다.</desc>
+  <defs>
+    <style>
+      .mono { font-family: "D2Coding", "JetBrains Mono", "Consolas", "Menlo", "Malgun Gothic", monospace; font-size: 15px; }
+      .fg   { fill: #E9E2D6; }
+      .dim  { fill: #8A8178; }
+      .id   { fill: #FF6B5B; font-weight: 700; }
+      .hit  { fill: #F2C14E; }
+      .ln   { opacity: 0; animation: in .2s ease-out forwards; }
+      .cur  { animation: blink 1s steps(1) infinite; }
+      .cover { animation: type 1.4s steps(28) .3s forwards; }
+      @keyframes type  { to { transform: translateX(780px); } }
+      @keyframes in    { to { opacity: 1; } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .ln { animation: none; opacity: 1; } .cur { animation: none; } .cover { animation: none; display: none; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="540" rx="22" fill="#1B1917"/>
+  <rect x=".75" y=".75" width="1278.5" height="538.5" rx="21.5" fill="none" stroke="#34302B" stroke-width="1.5"/>
+  <path d="M0 22a22 22 0 0 1 22-22h1236a22 22 0 0 1 22 22v26H0z" fill="#24211E"/>
+  <circle cx="30" cy="24" r="6.5" fill="#D2382B"/>
+  <circle cx="52" cy="24" r="6.5" fill="#E3A595"/>
+  <circle cx="74" cy="24" r="6.5" fill="#5E574F"/>
+  <text x="640" y="29" class="mono dim" font-size="13" text-anchor="middle">korean-anti-slop-writing</text>
+
+  <g class="mono" xml:space="preserve">
+    <text x="40" y="96"><tspan class="id">$</tspan><tspan class="fg"> py -I scripts/lint_korean_slop.py 답변.md --medium chat</tspan></text>
+    <rect class="cover" x="54" y="76" width="780" height="28" fill="#1B1917"/>
+
+    <text x="40" y="128" class="ln fg" style="animation-delay:2.0s">=== 답변.md (11 issues) ===</text>
+    <text x="58" y="154" class="ln" style="animation-delay:2.15s"><tspan class="dim">L1 </tspan><tspan class="id">[NOT_A_BUT_B]</tspan><tspan class="fg"> 'A가 아니라 B', 'A보다는 B' 대비 틀 </tspan><tspan class="hit">[문제가 아니라]</tspan></text>
+    <text x="58" y="180" class="ln" style="animation-delay:2.3s"><tspan class="dim">L1 </tspan><tspan class="id">[PRO_FORMULA]</tspan><tspan class="fg"> 전문직 틀 문구 (결론부터 말하면, 핵심은, 세 가지 핵심 축, X는 새로운 Y다) </tspan><tspan class="hit">[결론부터 말하면]</tspan></text>
+    <text x="58" y="206" class="ln" style="animation-delay:2.45s"><tspan class="dim">L1 </tspan><tspan class="id">[SYCOPHANCY]</tspan><tspan class="fg"> 칭찬과 맞장구 (좋은 질문, 핵심을 찔렀어, 상위 1%) </tspan><tspan class="hit">[좋은 질문]</tspan></text>
+    <text x="58" y="232" class="ln" style="animation-delay:2.6s"><tspan class="dim">L2 </tspan><tspan class="id">[EM_DASH_SLOP]</tspan><tspan class="fg"> 엠대시(—) 또는 가로줄(―) 사용 </tspan><tspan class="hit">[—]</tspan></text>
+    <text x="58" y="258" class="ln" style="animation-delay:2.75s"><tspan class="dim">L2 </tspan><tspan class="id">[CLAUDE_VOCAB]</tspan><tspan class="fg"> Claude 특유 어휘 (조용히, 떠받친다, 축, 결, 교차 확인 등) </tspan><tspan class="hit">[조용히]</tspan></text>
+    <text x="58" y="284" class="ln" style="animation-delay:2.9s"><tspan class="dim">L2 </tspan><tspan class="id">[CLAUDE_VOCAB]</tspan><tspan class="fg"> Claude 특유 어휘 (조용히, 떠받친다, 축, 결, 교차 확인 등) </tspan><tspan class="hit">[떠받치]</tspan></text>
+    <text x="58" y="310" class="ln" style="animation-delay:3.05s"><tspan class="dim">L2 </tspan><tspan class="id">[MATTERS_FRAME]</tspan><tspan class="fg"> '이게 중요합니다', '왜 ~가 중요한가' (Opus 5.5에서 사람보다 92~116배) </tspan><tspan class="hit">[이게 중요합니다]</tspan></text>
+    <text x="58" y="336" class="ln" style="animation-delay:3.2s"><tspan class="dim">L3 </tspan><tspan class="id">[MIDDLE_DOT_CHAIN]</tspan><tspan class="fg"> 가운데점(·)으로 셋 이상 묶음 </tspan><tspan class="hit">[설계·구현·검증]</tspan></text>
+    <text x="58" y="362" class="ln" style="animation-delay:3.35s"><tspan class="dim">L3 </tspan><tspan class="id">[COMMA_AFTER_CONNECTIVE]</tspan><tspan class="fg"> 연결어미 뒤 쉼표 (확인했고, 정리하며, 보내지만,) </tspan><tspan class="hit">[했고,]</tspan></text>
+    <text x="58" y="388" class="ln" style="animation-delay:3.5s"><tspan class="dim">L4 </tspan><tspan class="id">[CLOSING_OFFER]</tspan><tspan class="fg"> 끝 제안 문구 (원하시면, ~드릴까요?) </tspan><tspan class="hit">[원하시면]</tspan></text>
+    <text x="58" y="414" class="ln" style="animation-delay:3.65s"><tspan class="dim">L4 </tspan><tspan class="id">[CLOSING_OFFER]</tspan><tspan class="fg"> 끝 제안 문구 (원하시면, ~드릴까요?) </tspan><tspan class="hit">[정리해 드릴까요?]</tspan></text>
+
+    <text x="40" y="454" class="ln fg" font-weight="700" style="animation-delay:3.9s">Total issues found: 11</text>
+    <text x="40" y="494" class="ln" style="animation-delay:4.1s"><tspan class="id">$</tspan><tspan class="fg cur"> █</tspan></text>
+  </g>
+
+  <text x="1240" y="514" class="mono dim" font-size="12" text-anchor="end">출력 일부 (근거 문장 줄 생략)</text>
+</svg>
