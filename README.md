@@ -149,6 +149,10 @@ korean-anti-slop-writing/
 - KAIST XDAC의 AI 댓글 연구
 - 연결어미 뒤 쉼표를 다룬 국내 커뮤니티 글, `LLM 말투`와 `클로드 말투`를 다룬 국내 기사와 실무자 글 (2026)
 
+## 라이선스
+
+MIT 라이선스로 공개합니다. 전문은 [라이선스 파일](LICENSE)에 있습니다.
+
 <br>
 
 <p align="center">

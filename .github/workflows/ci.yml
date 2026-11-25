@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint-script:
+    # The linter is standard-library Python and the README promises it runs on Windows too.
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python: ['3.12']
+        include:
+          - os: ubuntu-latest
+            python: '3.9'
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONUTF8: '1'
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Compile
+        run: python -m py_compile scripts/lint_korean_slop.py
+      - name: Catch a known AI-slop sample, pass the README
+        shell: python
+        run: |
+          import json, pathlib, subprocess, sys, tempfile
+
+          def lint(path):
+              out = subprocess.run([sys.executable, "scripts/lint_korean_slop.py", str(path), "--json"],
+                                   capture_output=True, text=True, encoding="utf-8", check=True).stdout
+              return json.loads(out)
+
+          sample = pathlib.Path(tempfile.mkdtemp()) / "slop.md"
+          sample.write_text("좋은 질문입니다! 이 기능은 설계·구현·검증 전 과정에서 핵심적인 역할을 합니다 — "
+                            "원하시면 표로도 정리해 드릴까요?\n", encoding="utf-8")
+          found = lint(sample)["by_rule"]
+          for rule in ("MIDDLE_DOT_CHAIN", "EM_DASH_SLOP", "SYCOPHANCY", "CLOSING_OFFER"):
+              assert rule in found, f"{rule} not caught: {found}"
+
+          # The README says it passes its own linter with 0 issues; keep that true.
+          readme = lint("README.md")
+          assert readme["total_issues"] == 0, json.dumps(readme["files"], ensure_ascii=False, indent=1)
+          print("sample:", found, "| README: 0 issues")
